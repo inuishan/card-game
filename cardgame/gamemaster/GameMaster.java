@@ -4,6 +4,7 @@ import card.Card;
 import card.Suite;
 import deck.Deck;
 import deck.DeckCreatorImpl;
+import hand.Hand;
 import player.Player;
 import shuffler.DeckDistributorImpl;
 
@@ -29,7 +30,7 @@ public class GameMaster {
 
         DeckDistributorImpl deckShuffler = new DeckDistributorImpl();
 
-        Player[] players = new Player[4];
+        Player[] players = new Player[numPlayers];
 
         for (int i = 0; i < numPlayers; i++) {
             Player player = new Player();
@@ -39,6 +40,30 @@ public class GameMaster {
 
         deckShuffler.shuffle(randomDeck, players);
 
+        printPlayerCards(numPlayers, players);
+
+        Random random = new Random(System.currentTimeMillis());
+        int randomInt = random.nextInt(numPlayers - 1);
+
+        Suite trumpSuite = Suite.values()[randomInt];
+        System.out.println("TRUMP is " + trumpSuite);
+
+
+        int startingPlayerId = random.nextInt(3);
+        Player startingPlayer = players[startingPlayerId];
+
+        for (int numHands = 0; numHands < 52 / numPlayers; numHands++) {
+            Hand hand = new hand.Hand();
+            for (int i = 0; i < numPlayers; i++) {
+                Player player = players[startingPlayerId + i % 4];
+                player.playCard(hand, trumpSuite);
+            }
+            hand.getCurrentlyWinningPlayer();
+            System.out.println("hand.Hand won by " + hand.getCurrentlyWinningPlayer());
+        }
+    }
+
+    private static void printPlayerCards(int numPlayers, Player[] players) {
         for (int i = 0; i < numPlayers; i++) {
             Player player = players[i];
             System.out.println("PLAYER " + player.getPlayerId());
@@ -52,23 +77,6 @@ public class GameMaster {
                 System.out.println("");
             }
         }
-
-        Random random = new Random(System.currentTimeMillis());
-        int randomInt = random.nextInt(3);
-
-        Suite trumpSuite = Suite.values()[randomInt];
-        System.out.println("TRUMP is " + trumpSuite);
-
-        //player.Player startingPlayer = players[0];
-        //
-        //for (int numHands = 0; numHands < 13; numHands++) {
-        //    hand.Hand hand = new hand.Hand();
-        //    for (int i = 0; i < 4; i++) {
-        //        players[i].playCard(hand, trumpSuite);
-        //
-        //    }
-        //    System.out.println("hand.Hand won by " + hand.getCurrentlyWinningPlayer());
-        //}
     }
 
     public static void main(String[] args) {

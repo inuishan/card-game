@@ -17,7 +17,7 @@ import java.util.Map;
  */
 public class Player {
 
-    private String playerId;
+    private int playerId;
 
     /**
      * This represents the cards that this player has at any point
@@ -51,11 +51,11 @@ public class Player {
         this.numberOfHandsWon = numberOfHandsWon;
     }
 
-    public String getPlayerId() {
+    public int getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(String playerId) {
+    public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }
 
