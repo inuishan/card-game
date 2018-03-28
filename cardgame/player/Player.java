@@ -2,6 +2,7 @@ package player;
 
 import card.Card;
 import card.Suite;
+import hand.Hand;
 
 import java.util.ArrayList;
 import java.util.HashMap;

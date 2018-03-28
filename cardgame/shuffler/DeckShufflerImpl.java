@@ -2,6 +2,7 @@ package shuffler;
 
 
 import deck.Deck;
+import player.Player;
 
 /**
  * @author ishanjain
