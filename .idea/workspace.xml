@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cb0b0ee-ff81-4852-9a98-3c0553f239e6" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cardgame/shuffler/DeckShuffler.java" afterPath="$PROJECT_DIR$/cardgame/shuffler/DeckDistributor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cardgame/shuffler/DeckShufflerImpl.java" afterPath="$PROJECT_DIR$/cardgame/shuffler/DeckDistributorImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cardgame/hand/Hand.java" afterPath="$PROJECT_DIR$/cardgame/hand/Hand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cardgame/player/Player.java" afterPath="$PROJECT_DIR$/cardgame/player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cardgame/shuffler/DeckShuffler.java" afterPath="$PROJECT_DIR$/cardgame/shuffler/DeckShuffler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cardgame/shuffler/DeckShufflerImpl.java" afterPath="$PROJECT_DIR$/cardgame/shuffler/DeckShufflerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java" afterPath="$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -26,6 +25,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Hand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cardgame/hand/Hand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cardgame/card/Card.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,58 +82,8 @@
       <file leaf-file-name="DeckCreatorImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cardgame/deck/DeckCreatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="501">
               <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeckShuffler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cardgame/shuffler/DeckShuffler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeckShufflerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cardgame/shuffler/DeckShufflerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cardgame/player/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="66" column="27" lean-forward="false" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hand.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cardgame/hand/Hand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-303">
-              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,8 +94,32 @@
       <file leaf-file-name="GameMaster.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            <state relative-caret-position="247">
+              <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeckDistributorImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cardgame/shuffler/DeckDistributorImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeckDistributor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cardgame/shuffler/DeckDistributor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -440,11 +425,14 @@
         <option value="$PROJECT_DIR$/cardgame/deck/Deck.java" />
         <option value="$PROJECT_DIR$/cardgame/deck/DeckCreatorImpl.java" />
         <option value="$PROJECT_DIR$/cardgame/Player.java" />
-        <option value="$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java" />
-        <option value="$PROJECT_DIR$/cardgame/shuffler/DeckShufflerImpl.java" />
-        <option value="$PROJECT_DIR$/cardgame/shuffler/DeckShuffler.java" />
         <option value="$PROJECT_DIR$/cardgame/player/Player.java" />
         <option value="$PROJECT_DIR$/cardgame/hand/Hand.java" />
+        <option value="$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java" />
+        <option value="$PROJECT_DIR$/cardgame/shuffler/DeckShuffler.java" />
+        <option value="$PROJECT_DIR$/cardgame/shuffler/DeckDistributor.java" />
+        <option value="$PROJECT_DIR$/cardgame/shuffler/DeckShufflerImpl.java" />
+        <option value="$PROJECT_DIR$/cardgame/shuffler/DeckDistributerImpl.java" />
+        <option value="$PROJECT_DIR$/cardgame/shuffler/DeckDistributorImpl.java" />
       </list>
     </option>
   </component>
@@ -1144,7 +1132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522261043114</updated>
-      <workItem from="1522261047117" duration="1239000" />
+      <workItem from="1522261047117" duration="1476000" />
     </task>
     <task id="LOCAL-00001" summary="idea files">
       <created>1522261273041</created>
@@ -1181,11 +1169,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522262229019</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="build fixes">
+      <created>1522262296246</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1522262296246</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1239000" />
+    <option name="totallyTimeSpent" value="1476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -1235,15 +1230,27 @@
     <MESSAGE value="idea files" />
     <MESSAGE value="adding initial files" />
     <MESSAGE value="adding gradle files" />
-    <MESSAGE value="build fixes" />
     <MESSAGE value="putting things in packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="putting things in packages" />
+    <MESSAGE value="build fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="build fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cardgame/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="66" column="27" lean-forward="false" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cardgame/card/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1280,8 +1287,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cardgame/deck/DeckCreatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="501">
           <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cardgame/hand/Hand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1290,50 +1307,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        <state relative-caret-position="247">
+          <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cardgame/shuffler/DeckShuffler.java">
+    <entry file="file://$PROJECT_DIR$/cardgame/shuffler/DeckDistributor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="150">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cardgame/shuffler/DeckShufflerImpl.java">
+    <entry file="file://$PROJECT_DIR$/cardgame/shuffler/DeckDistributorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cardgame/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="66" column="27" lean-forward="false" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cardgame/hand/Hand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="150">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

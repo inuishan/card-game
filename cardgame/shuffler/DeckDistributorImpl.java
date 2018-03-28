@@ -8,7 +8,7 @@ import player.Player;
  * @author ishanjain
  * @since 28/03/18
  */
-public class DeckShufflerImpl implements DeckShuffler {
+public class DeckDistributorImpl implements DeckDistributor {
 
     /**
      * This shuffles the deck to the players passed

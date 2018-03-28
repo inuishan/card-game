@@ -8,7 +8,7 @@ import player.Player;
  * @author ishanjain
  * @since 28/03/18
  */
-public interface DeckShuffler {
+public interface DeckDistributor {
 
     void shuffle(Deck deck, Player[] players);
 }

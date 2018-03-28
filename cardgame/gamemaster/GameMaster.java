@@ -5,7 +5,7 @@ import card.Suite;
 import deck.Deck;
 import deck.DeckCreatorImpl;
 import player.Player;
-import shuffler.DeckShufflerImpl;
+import shuffler.DeckDistributorImpl;
 
 import java.util.List;
 import java.util.Map;
@@ -24,11 +24,14 @@ public class GameMaster {
         DeckCreatorImpl deckCreator = new DeckCreatorImpl();
         Deck randomDeck = deckCreator.createRandomDeck();
 
-        DeckShufflerImpl deckShuffler = new DeckShufflerImpl();
+
+        int numPlayers = 4;
+
+        DeckDistributorImpl deckShuffler = new DeckDistributorImpl();
 
         Player[] players = new Player[4];
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < numPlayers; i++) {
             Player player = new Player();
             player.setPlayerId(String.valueOf(i));
             players[i] = player;
@@ -36,7 +39,7 @@ public class GameMaster {
 
         deckShuffler.shuffle(randomDeck, players);
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < numPlayers; i++) {
             Player player = players[i];
             System.out.println("PLAYER " + player.getPlayerId());
             Map<Suite, List<Card>> suiteVsCards = player.getSuiteVsCards();
