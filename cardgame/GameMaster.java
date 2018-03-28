@@ -1,10 +1,8 @@
-package com.ishan.graph.cardgame;
-
-import com.ishan.graph.cardgame.card.Card;
-import com.ishan.graph.cardgame.card.Suite;
-import com.ishan.graph.cardgame.deck.Deck;
-import com.ishan.graph.cardgame.deck.DeckCreatorImpl;
-import com.ishan.graph.cardgame.shuffler.DeckShufflerImpl;
+import card.Card;
+import card.Suite;
+import deck.Deck;
+import deck.DeckCreatorImpl;
+import shuffler.DeckShufflerImpl;
 
 import java.util.List;
 import java.util.Map;

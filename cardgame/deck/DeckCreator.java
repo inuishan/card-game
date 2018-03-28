@@ -1,4 +1,4 @@
-package com.ishan.graph.cardgame.deck;
+package deck;
 
 /**
  * This creates a random cardgame

@@ -1,4 +1,4 @@
-package com.ishan.graph.cardgame.shuffler;
+package shuffler;
 
 import com.ishan.graph.cardgame.Player;
 import com.ishan.graph.cardgame.deck.Deck;

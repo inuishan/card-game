@@ -1,5 +1,3 @@
-package com.ishan.graph.cardgame;
-
 import com.ishan.graph.cardgame.card.Card;
 import com.ishan.graph.cardgame.card.Suite;
 

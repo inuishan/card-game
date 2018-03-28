@@ -1,4 +1,4 @@
-package com.ishan.graph.cardgame.card;
+package card;
 
 /**
  * @author ishanjain
