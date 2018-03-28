@@ -1,6 +1,7 @@
 package deck;
 
-import com.ishan.graph.cardgame.card.Card;
+
+import card.Card;
 
 import java.util.List;
 

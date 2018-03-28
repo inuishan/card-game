@@ -1,7 +1,8 @@
 package deck;
 
-import com.ishan.graph.cardgame.card.Card;
-import com.ishan.graph.cardgame.card.Suite;
+
+import card.Card;
+import card.Suite;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;

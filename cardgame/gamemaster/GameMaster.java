@@ -1,7 +1,10 @@
+package gamemaster;
+
 import card.Card;
 import card.Suite;
 import deck.Deck;
 import deck.DeckCreatorImpl;
+import player.Player;
 import shuffler.DeckShufflerImpl;
 
 import java.util.List;
@@ -53,15 +56,15 @@ public class GameMaster {
         Suite trumpSuite = Suite.values()[randomInt];
         System.out.println("TRUMP is " + trumpSuite);
 
-        //Player startingPlayer = players[0];
+        //player.Player startingPlayer = players[0];
         //
         //for (int numHands = 0; numHands < 13; numHands++) {
-        //    Hand hand = new Hand();
+        //    hand.Hand hand = new hand.Hand();
         //    for (int i = 0; i < 4; i++) {
         //        players[i].playCard(hand, trumpSuite);
         //
         //    }
-        //    System.out.println("Hand won by " + hand.getCurrentlyWinningPlayer());
+        //    System.out.println("hand.Hand won by " + hand.getCurrentlyWinningPlayer());
         //}
     }
 

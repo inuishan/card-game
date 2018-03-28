@@ -1,7 +1,7 @@
 package shuffler;
 
-import com.ishan.graph.cardgame.Player;
-import com.ishan.graph.cardgame.deck.Deck;
+
+import deck.Deck;
 
 /**
  * @author ishanjain
