@@ -18,7 +18,7 @@ public class Hand {
 
     private int maxTrumpCard;
 
-    private String currentlyWinningPlayer;
+    private Integer currentlyWinningPlayer;
 
     private Map<String, Card> playerIdVsCard;
 
@@ -30,7 +30,7 @@ public class Hand {
         this.playerIdVsCard = playerIdVsCard;
     }
 
-    public void addCardToHand(String playerId, Card card, Suite trumpSuite) {
+    public void addCardToHand(int playerId, Card card, Suite trumpSuite) {
         Suite suite = card.getSuite();
         if (currentSuite == null) {
             this.currentSuite = suite;
@@ -76,11 +76,11 @@ public class Hand {
         this.maxTrumpCard = maxTrumpCard;
     }
 
-    public String getCurrentlyWinningPlayer() {
+    public Integer getCurrentlyWinningPlayer() {
         return currentlyWinningPlayer;
     }
 
-    public void setCurrentlyWinningPlayer(String currentlyWinningPlayer) {
+    public void setCurrentlyWinningPlayer(Integer currentlyWinningPlayer) {
         this.currentlyWinningPlayer = currentlyWinningPlayer;
     }
 }

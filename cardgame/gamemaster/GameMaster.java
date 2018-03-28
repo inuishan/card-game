@@ -50,7 +50,6 @@ public class GameMaster {
 
 
         int startingPlayerId = random.nextInt(3);
-        Player startingPlayer = players[startingPlayerId];
 
         for (int numHands = 0; numHands < 52 / numPlayers; numHands++) {
             Hand hand = new hand.Hand();
@@ -58,8 +57,8 @@ public class GameMaster {
                 Player player = players[startingPlayerId + i % 4];
                 player.playCard(hand, trumpSuite);
             }
-            hand.getCurrentlyWinningPlayer();
-            System.out.println("hand.Hand won by " + hand.getCurrentlyWinningPlayer());
+            startingPlayerId = hand.getCurrentlyWinningPlayer();
+            System.out.println("Hand won by " + hand.getCurrentlyWinningPlayer());
         }
     }
 
