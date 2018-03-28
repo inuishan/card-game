@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7cb0b0ee-ff81-4852-9a98-3c0553f239e6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java" afterPath="$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cardgame/hand/Hand.java" afterPath="$PROJECT_DIR$/cardgame/hand/Hand.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -24,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Hand.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cardgame/hand/Hand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123">
-              <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="15">
+              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2134#2135#0" expanded="true" />
@@ -92,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameMaster.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameMaster.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="222">
+              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -448,8 +446,8 @@
         <option value="$PROJECT_DIR$/cardgame/shuffler/DeckDistributerImpl.java" />
         <option value="$PROJECT_DIR$/cardgame/shuffler/DeckDistributorImpl.java" />
         <option value="$PROJECT_DIR$/cardgame/player/Player.java" />
-        <option value="$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java" />
         <option value="$PROJECT_DIR$/cardgame/hand/Hand.java" />
+        <option value="$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java" />
       </list>
     </option>
   </component>
@@ -1150,7 +1148,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522261043114</updated>
-      <workItem from="1522261047117" duration="2157000" />
+      <workItem from="1522261047117" duration="2177000" />
     </task>
     <task id="LOCAL-00001" summary="idea files">
       <created>1522261273041</created>
@@ -1215,11 +1213,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522263182518</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changing hand">
+      <created>1522263257623</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1522263257623</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2157000" />
+    <option name="totallyTimeSpent" value="2177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -1274,7 +1279,8 @@
     <MESSAGE value="deck distrubutor" />
     <MESSAGE value="added comment for assuming 4 players" />
     <MESSAGE value="player id as int" />
-    <option name="LAST_COMMIT_MESSAGE" value="player id as int" />
+    <MESSAGE value="changing hand" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing hand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1359,24 +1365,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cardgame/hand/Hand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="15">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2134#2135#0" expanded="true" />
             <element signature="e#2179#2180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cardgame/gamemaster/GameMaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

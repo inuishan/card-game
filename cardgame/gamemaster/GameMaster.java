@@ -34,7 +34,7 @@ public class GameMaster {
 
         for (int i = 0; i < numPlayers; i++) {
             Player player = new Player();
-            player.setPlayerId(String.valueOf(i));
+            player.setPlayerId(i);
             players[i] = player;
         }
 
