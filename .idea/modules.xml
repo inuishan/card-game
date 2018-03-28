@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cards-game.iml" filepath="$PROJECT_DIR$/.idea/modules/cards-game.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cards-game_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cards-game_main.iml" group="cards-game" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cards-game_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cards-game_test.iml" group="cards-game" />
     </modules>
   </component>
 </project>
