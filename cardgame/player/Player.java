@@ -80,22 +80,8 @@ public class Player {
         }
         List<Card> currentSuiteCards = suiteVsCards.get(currentSuite);
         if (currentSuiteCards != null && currentSuiteCards.size() > 0) {
-            //This means I have cards of same suite, lets see if I can win this hand.
-            if (hand.getMaxTrumpCard() != 0) {
-                //There is a trump thrown in. Note that if the current hand is of trump, this is not set! So no need
-                //to worry about checking for current hand = trump suite
-                return playMinOfSuite(currentSuite, true);
-            } else {
-                //There is no trump thrown in till now, lets see if I can win this
-                Card maxCard = playMaxOfSuite(currentSuite, false);
-                if (hand.getMaxCardOfCurrentSuite() < maxCard.getValue()) {
-                    //I have a card which I can play
-                    currentSuiteCards.remove(maxCard);
-                    return maxCard;
-                } else {
-                    return playMinOfSuite(currentSuite, true);
-                }
-            }
+            return playCardOfCurrentSuite(hand, currentSuite, currentSuiteCards);
+
         } else {
             //I do not have cards of the same suite, lets see if I can throw in a trump
             List<Card> trumpCards = suiteVsCards.get(trumpSuite);
@@ -108,6 +94,25 @@ public class Player {
             }
         }
         return null;
+    }
+
+    private Card playCardOfCurrentSuite(Hand hand, Suite currentSuite, List<Card> currentSuiteCards) {
+        //This means I have cards of same suite, lets see if I can win this hand.
+        if (hand.getMaxTrumpCard() != 0) {
+            //There is a trump thrown in. Note that if the current hand is of trump, this is not set! So no need
+            //to worry about checking for current hand = trump suite
+            return playMinOfSuite(currentSuite, true);
+        } else {
+            //There is no trump thrown in till now, lets see if I can win this
+            Card maxCard = playMaxOfSuite(currentSuite, false);
+            if (hand.getMaxCardOfCurrentSuite() < maxCard.getValue()) {
+                //I have a card which I can play
+                currentSuiteCards.remove(maxCard);
+                return maxCard;
+            } else {
+                return playMinOfSuite(currentSuite, true);
+            }
+        }
     }
 
     /**
