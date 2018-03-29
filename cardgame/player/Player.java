@@ -100,7 +100,7 @@ public class Player {
         if (hand.getMaxTrumpCard() != 0) {
             //There is a trump thrown in the hand, Lets find if I have any trump greater than this
             Card cardToRemove = null;
-            for (int index = trumpCards.size() - 1; index >= 0; index++) {
+            for (int index = trumpCards.size() - 1; index >= 0; index--) {
                 Card card = trumpCards.get(index);
                 if (card.getValue() > hand.getMaxTrumpCard()) {
                     cardToRemove = card;
