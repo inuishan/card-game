@@ -113,6 +113,11 @@ public class Player {
             } else {
                 //I do not have a trump card greater than the trump, lets throw min card of another suite
                 Card card = playMinCardOfAnySuiteExceptTrump(trumpSuite);
+                if (card == null) {
+                    // I do not have any card except trump left to throw
+                    return playMinOfSuite(trumpSuite, true);
+                }
+                return card;
             }
         } else {
             //There is no trump thrown in the hand, lets throw my lowest trump card
