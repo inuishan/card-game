@@ -38,6 +38,13 @@ public class Hand {
         if (currentlyWinningPlayer == null) {
             currentlyWinningPlayer = playerId;
         }
+        // if this suite is a trump & current suite is not a trump & current card value is max trump thrown till now,
+        // then this is the winner
+        if (card.getSuite() == trumpSuite && currentSuite != trumpSuite && card.getValue() > maxTrumpCard) {
+            currentlyWinningPlayer = playerId;
+            maxTrumpCard = card.getValue();
+            return;
+        }
 
         //If the current card is of current suite & there is no trump thrown in and its greater than the current max,
         // this wins
