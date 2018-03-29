@@ -4,10 +4,7 @@ import card.Card;
 import card.Suite;
 import hand.Hand;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Represents a player playing the game
@@ -94,14 +91,30 @@ public class Player {
         }
         if (suitsExceptTrumpIHave.size() == 0) {
             // I do not have any suite, I need to play trump
+            return playMaxOfSuite(trumpSuite);
         }
-        return null;
+        // Decide a suite randomly
+        Random random = new Random(System.currentTimeMillis());
+        int randomSuite = random.nextInt(suitsExceptTrumpIHave.size() - 1);
+        return playMaxOfSuite(suitsExceptTrumpIHave.get(randomSuite));
     }
 
+    /**
+     * This plays max of a suite and removes that card from this player.
+     *
+     * @param suite The {@link Suite} which I need to play
+     * @return The {@link Card} which I play in the Hand
+     */
     private Card playMaxOfSuite(Suite suite) {
         return null;
     }
 
+    /**
+     * This plays min of a suite and removes that card from this player.
+     *
+     * @param suite The {@link Suite} which I need to play
+     * @return The {@link Card} which I play in the Hand
+     */
     private Card playMinOfSuite(Suite suite) {
         return null;
     }
