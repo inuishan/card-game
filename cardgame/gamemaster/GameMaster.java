@@ -20,7 +20,7 @@ import java.util.Random;
  */
 public class GameMaster {
 
-    public static void playGame() {
+    private static void playGame() {
 
         DeckCreatorImpl deckCreator = new DeckCreatorImpl();
         Deck randomDeck = deckCreator.createRandomDeck();
@@ -55,7 +55,8 @@ public class GameMaster {
             Hand hand = new hand.Hand();
             for (int i = 0; i < numPlayers; i++) {
                 Player player = players[startingPlayerId + i % 4];
-                player.playCard(hand, trumpSuite);
+                Card card = player.playCard(hand, trumpSuite);
+                hand.addCardToHand(player.getPlayerId(), card, trumpSuite);
             }
             startingPlayerId = hand.getCurrentlyWinningPlayer();
             System.out.println("Hand won by " + hand.getCurrentlyWinningPlayer());
