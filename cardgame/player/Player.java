@@ -61,6 +61,7 @@ public class Player {
         numCards++;
         List<Card> cards = suiteVsCards.computeIfAbsent(card.getSuite(), k -> new ArrayList<>());
         cards.add(card);
+        //Implementation leaking here, this is assuming 4 players which should not be done here.
         if (numCards == 13) {
             //Lets sort everything
             for (Suite suite : Suite.values()) {
