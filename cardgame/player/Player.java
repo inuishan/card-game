@@ -67,7 +67,7 @@ public class Player {
     public Card playCard(Hand hand, Suite trumpSuite) {
         if (hand.getCurrentSuite() == null) {
             //I decide the current suite
-            return playFirstCard();
+            return playFirstCard(trumpSuite);
         }
 
         return null;
@@ -84,6 +84,25 @@ public class Player {
      * @return The {@link Card} that I played.
      */
     private Card playFirstCard(Suite trumpSuite) {
+        List<Suite> suitsExceptTrumpIHave = new ArrayList<>();
+        for (Map.Entry<Suite, List<Card>> entry : suiteVsCards.entrySet()) {
+            Suite suite = entry.getKey();
+            // I have cards which are not trump
+            if (suite != trumpSuite && entry.getValue() != null && entry.getValue().size() > 0) {
+                suitsExceptTrumpIHave.add(suite);
+            }
+        }
+        if (suitsExceptTrumpIHave.size() == 0) {
+            // I do not have any suite, I need to play trump
+        }
+        return null;
+    }
+
+    private Card playMaxOfSuite(Suite suite) {
+        return null;
+    }
+
+    private Card playMinOfSuite(Suite suite) {
         return null;
     }
 }
