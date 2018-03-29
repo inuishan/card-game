@@ -200,7 +200,7 @@ public class Player {
         }
         // Decide a suite randomly
         Random random = new Random(System.currentTimeMillis());
-        int randomSuite = random.nextInt(suitsExceptTrumpIHave.size() - 1);
+        int randomSuite = random.nextInt(suitsExceptTrumpIHave.size());
         return playMaxOfSuite(suitsExceptTrumpIHave.get(randomSuite), true);
     }
 

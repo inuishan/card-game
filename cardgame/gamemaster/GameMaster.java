@@ -46,16 +46,18 @@ public class GameMaster {
         int randomInt = random.nextInt(numPlayers - 1);
 
         Suite trumpSuite = Suite.values()[randomInt];
-        System.out.println("TRUMP is " + trumpSuite);
+        System.out.println("TRUMP is " + trumpSuite.getDisplayCode());
 
 
-        int startingPlayerId = random.nextInt(3);
+        int startingPlayerId = random.nextInt(numPlayers);
 
         for (int numHands = 0; numHands < 52 / numPlayers; numHands++) {
-            Hand hand = new hand.Hand();
+            System.out.println("Starting Hand " + (numHands + 1));
+            Hand hand = new Hand();
             for (int i = 0; i < numPlayers; i++) {
-                Player player = players[startingPlayerId + i % 4];
+                Player player = players[(startingPlayerId + i) % numPlayers];
                 Card card = player.playCard(hand, trumpSuite);
+                System.out.println("Player " + player.getPlayerId() + " played a card " + card.getValue() + " of " + card.getSuite().getDisplayCode());
                 hand.addCardToHand(player.getPlayerId(), card, trumpSuite);
             }
             startingPlayerId = hand.getCurrentlyWinningPlayer();
