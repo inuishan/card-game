@@ -69,7 +69,21 @@ public class Player {
         List<Card> currentSuiteCards = suiteVsCards.get(currentSuite);
         if (currentSuiteCards != null && currentSuiteCards.size() > 0) {
             //This means I have cards of same suite, lets see if I can win this hand.
-
+            if (hand.getMaxTrumpCard() != 0) {
+                //There is a trump thrown in. Note that if the current hand is of trump, this is not set! So no need
+                //to worry about checking for current hand = trump suite
+                return playMinOfSuite(currentSuite, true);
+            } else {
+                //There is no trump thrown in till now, lets see if I can win this
+                Card maxCard = playMaxOfSuite(currentSuite, false);
+                if (hand.getMaxCardOfCurrentSuite() < maxCard.getValue()) {
+                    //I have a card which I can play
+                    currentSuiteCards.remove(maxCard);
+                    return maxCard;
+                } else {
+                    return playMinOfSuite(currentSuite, true);
+                }
+            }
         }
         return null;
     }
