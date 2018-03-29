@@ -91,31 +91,33 @@ public class Player {
         }
         if (suitsExceptTrumpIHave.size() == 0) {
             // I do not have any suite, I need to play trump
-            return playMaxOfSuite(trumpSuite);
+            return playMaxOfSuite(trumpSuite, true);
         }
         // Decide a suite randomly
         Random random = new Random(System.currentTimeMillis());
         int randomSuite = random.nextInt(suitsExceptTrumpIHave.size() - 1);
-        return playMaxOfSuite(suitsExceptTrumpIHave.get(randomSuite));
+        return playMaxOfSuite(suitsExceptTrumpIHave.get(randomSuite), true);
     }
 
     /**
      * This plays max of a suite and removes that card from this player.
      *
-     * @param suite The {@link Suite} which I need to play
+     * @param suite  The {@link Suite} which I need to play
+     * @param remove This also removes the card. Set this as true if you are sure to play this card
      * @return The {@link Card} which I play in the Hand
      */
-    private Card playMaxOfSuite(Suite suite) {
+    private Card playMaxOfSuite(Suite suite, boolean remove) {
         return null;
     }
 
     /**
      * This plays min of a suite and removes that card from this player.
      *
-     * @param suite The {@link Suite} which I need to play
+     * @param suite  The {@link Suite} which I need to play
+     * @param remove This also removes the card. Set this as true if you are sure to play this card
      * @return The {@link Card} which I play in the Hand
      */
-    private Card playMinOfSuite(Suite suite) {
+    private Card playMinOfSuite(Suite suite, boolean remove) {
         return null;
     }
 }
