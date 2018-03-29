@@ -24,7 +24,7 @@ public class DeckDistributorImpl implements DeckDistributor {
                     "This implementation assumes that deck is being shuffled among 4 players");
         }
         // Note that this is assuming 4 players, which is wrong. It should calculate based on players array size.
-        // For the sake of simplicity, this has been coded because if only 2players were there then we need to remove
+        // For the sake of simplicity, this has been coded because if only 5 players were there then we need to remove
         // 2 cards
         // 1 of club & diamond.
         int playerIndex = 0;
