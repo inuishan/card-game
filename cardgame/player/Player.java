@@ -14,6 +14,8 @@ import java.util.*;
  */
 public class Player {
 
+    private int numCards = 0;
+
     private int playerId;
 
     /**
@@ -56,8 +58,18 @@ public class Player {
     }
 
     public void addCard(Card card) {
+        numCards++;
         List<Card> cards = suiteVsCards.computeIfAbsent(card.getSuite(), k -> new ArrayList<>());
         cards.add(card);
+        if (numCards == 13) {
+            //Lets sort everything
+            for (Suite suite : Suite.values()) {
+                List<Card> cardsOfSuite = suiteVsCards.get(suite);
+                if (cardsOfSuite != null) {
+                    cardsOfSuite.sort((o1, o2) -> -1 * Integer.compare(o1.getValue(), o2.getValue()));
+                }
+            }
+        }
     }
 
     public Card playCard(Hand hand, Suite trumpSuite) {
@@ -82,6 +94,16 @@ public class Player {
                     return maxCard;
                 } else {
                     return playMinOfSuite(currentSuite, true);
+                }
+            }
+        } else {
+            //I do not have cards of the same suite, lets see if I can throw in a trump
+            List<Card> trumpCards = suiteVsCards.get(trumpSuite);
+            if (trumpCards != null && trumpCards.size() > 0) {
+                //I have trump card
+                if (hand.getMaxTrumpCard() != 0) {
+                    //There is a trump thrown in the hand, Lets find if I have any trump greater than this
+
                 }
             }
         }
