@@ -71,7 +71,7 @@ public class GameMaster {
             System.out.println("PLAYER " + player.getPlayerId());
             Map<Suite, List<Card>> suiteVsCards = player.getSuiteVsCards();
             for (Map.Entry<Suite, List<Card>> entry : suiteVsCards.entrySet()) {
-                System.out.println(entry.getKey().getDisplayCode());
+                System.out.print(entry.getKey().getDisplayCode() + " -> ");
                 List<Card> value = entry.getValue();
                 for (Card card : value) {
                     System.out.print(card.getValue() + " ");
