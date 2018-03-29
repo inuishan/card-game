@@ -89,27 +89,35 @@ public class Player {
     }
 
     private Card getCardOfAnotherSuite(Hand hand, Suite trumpSuite) {
-        //I do not have cards of the same suite, lets see if I can throw in a trump
         List<Card> trumpCards = suiteVsCards.get(trumpSuite);
-        if (trumpCards != null && trumpCards.size() > 0) {
-            //I have trump card
-            if (hand.getMaxTrumpCard() != 0) {
-                //There is a trump thrown in the hand, Lets find if I have any trump greater than this
-                Card cardToRemove = null;
-                for (int index = trumpCards.size() - 1; index >= 0; index++) {
-                    Card card = trumpCards.get(index);
-                    if (card.getValue() > hand.getMaxTrumpCard()) {
-                        cardToRemove = card;
-                        break;
-                    }
-                }
-                if (cardToRemove != null) {
-                    trumpCards.remove(cardToRemove);
-                    return cardToRemove;
+        //If I do not have cards of same suite & I do not have trump then throw in the min of another suite
+        if (trumpCards == null || trumpCards.size() == 0) {
+            return playMinCardOfAnySuiteExceptTrump(trumpSuite);
+        }
+
+        //I do not have cards of the same suite, lets see if I can throw in a trump
+        //I have trump card
+        if (hand.getMaxTrumpCard() != 0) {
+            //There is a trump thrown in the hand, Lets find if I have any trump greater than this
+            Card cardToRemove = null;
+            for (int index = trumpCards.size() - 1; index >= 0; index++) {
+                Card card = trumpCards.get(index);
+                if (card.getValue() > hand.getMaxTrumpCard()) {
+                    cardToRemove = card;
+                    break;
                 }
             }
+            if (cardToRemove != null) {
+                trumpCards.remove(cardToRemove);
+                return cardToRemove;
+            } else {
+                //I do not have a trump card greater than the trump, lets throw min card of another suite
+                Card card = playMinCardOfAnySuiteExceptTrump(trumpSuite);
+            }
+        } else {
+            //There is no trump thrown in the hand, lets throw my lowest trump card
+            return playMinOfSuite(trumpSuite, true);
         }
-        return null;
     }
 
     private Card playMinCardOfAnySuiteExceptTrump(Suite trump) {
@@ -129,6 +137,11 @@ public class Player {
                 }
             }
         }
+        if (qualifiedSuits.size() == 0) {
+            //There is no qualified suit
+            return null;
+        }
+
         Random random = new Random(System.currentTimeMillis());
         int index = random.nextInt(qualifiedSuits.size());
         Suite suite = qualifiedSuits.get(index);
