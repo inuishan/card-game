@@ -67,8 +67,23 @@ public class Player {
     public Card playCard(Hand hand, Suite trumpSuite) {
         if (hand.getCurrentSuite() == null) {
             //I decide the current suite
+            return playFirstCard();
         }
 
+        return null;
+    }
+
+    /**
+     * There is nothing in the hand. I decide the card to play.
+     * <p>
+     * Strategy:
+     * I cannot play trump if I have any other suite.
+     * I put forward the highest card of a random suite.
+     * If I only have the trump suite available, then I play highest of trump suite.
+     *
+     * @return The {@link Card} that I played.
+     */
+    private Card playFirstCard(Suite trumpSuite) {
         return null;
     }
 }
