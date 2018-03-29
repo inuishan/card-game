@@ -20,9 +20,9 @@ each player tries to win maximum no. of hands greedily. at each turn, player tri
 4. if player doesn't have big enough trump card, or he doesn't have trump at all, he puts smallest available card of any other suit, in case of conflict choose random
 
 
-<b>Please not that while playing the first card of the hand, the player does not play his highest card, he chosses a random suite except tump and plays the highest card of that trump.</b>
+<b>Please not that while playing the first card of the hand, the player does not play his highest card, he chosses a random suite except tump and plays the highest card of that trump. </b>
 
-
+```
 A sample simulation of the game:
 
 PLAYER 0
@@ -421,3 +421,5 @@ Player 0 won 1 hands
 Player 1 won 3 hands
 Player 2 won 4 hands
 Player 3 won 5 hands
+
+```
