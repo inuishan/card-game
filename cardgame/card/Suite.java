@@ -5,8 +5,14 @@ package card;
  * @since 28/03/18
  */
 public enum Suite {
-    HEARTS,
-    SPADE,
-    CLUB,
-    DIAMOND
+    HEARTS("♥"),
+    SPADE("♠"),
+    CLUB("♣"),
+    DIAMOND("♦");
+
+    private final String displayCode;
+
+    Suite(String displayCode) {
+        this.displayCode = displayCode;
+    }
 }
