@@ -27,7 +27,6 @@ public class Player {
      */
     private int numberOfHandsWon = 0;
 
-
     public Player() {
         this.suiteVsCards = new HashMap<>();
     }
@@ -62,11 +61,16 @@ public class Player {
     }
 
     public Card playCard(Hand hand, Suite trumpSuite) {
-        if (hand.getCurrentSuite() == null) {
+        Suite currentSuite = hand.getCurrentSuite();
+        if (currentSuite == null) {
             //I decide the current suite
             return playFirstCard(trumpSuite);
         }
+        List<Card> currentSuiteCards = suiteVsCards.get(currentSuite);
+        if (currentSuiteCards != null && currentSuiteCards.size() > 0) {
+            //This means I have cards of same suite, lets see if I can win this hand.
 
+        }
         return null;
     }
 
