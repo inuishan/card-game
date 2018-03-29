@@ -38,18 +38,25 @@ public class Hand {
         if (currentlyWinningPlayer == null) {
             currentlyWinningPlayer = playerId;
         }
-        // If the current turn is a trump & if this card is of trump & higher denomination, this player is the winner
+
+        //If the current card is of current suite & there is no trump thrown in and its greater than the current max,
+        // this wins
+        if (card.getSuite() == currentSuite && maxTrumpCard == 0 && card.getValue() > maxCardOfCurrentSuite) {
+            maxCardOfCurrentSuite = card.getValue();
+            currentlyWinningPlayer = playerId;
+            return;
+        }
+
+        // If the current card is a trump & if this card is of trump & higher denomination, this player is the winner
         int value = card.getValue();
         if (currentSuite == trumpSuite && suite.equals(trumpSuite) && value > maxTrumpCard) {
             this.maxTrumpCard = value;
             currentlyWinningPlayer = playerId;
         }
-        // If the current turn is not a trump & its not of the current suite, ignore it
-        if (currentSuite != trumpSuite && suite != trumpSuite) {
+        // If the current card is not a trump & its not of the current suite, ignore it
+        if (card.getSuite() != trumpSuite && card.getSuite() != currentSuite) {
             return;
         }
-        // If the current turn is not a trump & its not of the current suite, ignore it
-        //TODO complete the logic
     }
 
     public Suite getCurrentSuite() {
