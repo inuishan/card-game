@@ -3,9 +3,11 @@ package gamemaster;
 import card.Card;
 import card.Suite;
 import deck.Deck;
+import deck.DeckCreator;
 import deck.DeckCreatorImpl;
 import hand.Hand;
 import player.Player;
+import shuffler.DeckDistributor;
 import shuffler.DeckDistributorImpl;
 
 import java.util.List;
@@ -22,13 +24,13 @@ public class GameMaster {
 
     private static void playGame() {
 
-        DeckCreatorImpl deckCreator = new DeckCreatorImpl();
+        DeckCreator deckCreator = new DeckCreatorImpl();
         Deck randomDeck = deckCreator.createRandomDeck();
 
 
         int numPlayers = 4;
 
-        DeckDistributorImpl deckShuffler = new DeckDistributorImpl();
+        DeckDistributor deckDistributor = new DeckDistributorImpl();
 
         Player[] players = new Player[numPlayers];
 
@@ -38,7 +40,7 @@ public class GameMaster {
             players[i] = player;
         }
 
-        deckShuffler.shuffle(randomDeck, players);
+        deckDistributor.shuffle(randomDeck, players);
 
         printPlayerCards(numPlayers, players);
 
@@ -62,6 +64,7 @@ public class GameMaster {
             }
             startingPlayerId = hand.getCurrentlyWinningPlayer();
             System.out.println("Hand won by " + hand.getCurrentlyWinningPlayer());
+            printPlayerCards(numPlayers, players);
         }
     }
 
