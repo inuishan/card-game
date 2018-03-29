@@ -72,6 +72,14 @@ public class Player {
         }
     }
 
+
+    /**
+     * The main logic of drawing a card to play
+     *
+     * @param hand       The {@link Hand} current state of the hand
+     * @param trumpSuite The {@link Suite} indicating the trump suite
+     * @return The {@link Card} card to play
+     */
     public Card playCard(Hand hand, Suite trumpSuite) {
         Suite currentSuite = hand.getCurrentSuite();
         if (currentSuite == null) {
@@ -88,6 +96,14 @@ public class Player {
         return null;
     }
 
+    /**
+     * This draws the card in the case when I do not have any card of the current suite. It can draw a trump or
+     * another card
+     *
+     * @param hand       The {@link Hand} representing current state of the hand
+     * @param trumpSuite The {@link Suite} representing the trump suite chosen by game master
+     * @return The {@link Card} denoting the card to play
+     */
     private Card getCardOfAnotherSuite(Hand hand, Suite trumpSuite) {
         List<Card> trumpCards = suiteVsCards.get(trumpSuite);
         //If I do not have cards of same suite & I do not have trump then throw in the min of another suite
@@ -125,6 +141,12 @@ public class Player {
         }
     }
 
+    /**
+     * This playes the minimum card of a suite except the trump
+     *
+     * @param trump The {@link Suite} indicating the trump suite chosen by the game master
+     * @return The {@link Card} to play
+     */
     private Card playMinCardOfAnySuiteExceptTrump(Suite trump) {
         List<Suite> qualifiedSuits = new ArrayList<>();
         int min = Integer.MAX_VALUE;
@@ -156,6 +178,9 @@ public class Player {
         return cardToPlay;
     }
 
+    /**
+     * This plays the card of current suite. It will either play the max or min of the current suite depending on situation
+     */
     private Card playCardOfCurrentSuite(Hand hand, Suite currentSuite, List<Card> currentSuiteCards) {
         //This means I have cards of same suite, lets see if I can win this hand.
         if (hand.getMaxTrumpCard() != 0) {
