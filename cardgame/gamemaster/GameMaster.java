@@ -10,6 +10,7 @@ import player.Player;
 import shuffler.DeckDistributor;
 import shuffler.DeckDistributorImpl;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -53,18 +54,35 @@ public class GameMaster {
 
         int startingPlayerId = random.nextInt(numPlayers);
 
+        Map<Integer, Integer> playerIdVsHandsWon = new HashMap<>();
+
         for (int numHands = 0; numHands < 52 / numPlayers; numHands++) {
             System.out.println("Starting Hand " + (numHands + 1));
             Hand hand = new Hand();
             for (int i = 0; i < numPlayers; i++) {
                 Player player = players[(startingPlayerId + i) % numPlayers];
                 Card card = player.playCard(hand, trumpSuite);
-                System.out.println("Player " + player.getPlayerId() + " played a card " + card.getValue() + " of " + card.getSuite().getDisplayCode());
+                System.out.println("Player " + player.getPlayerId() + " played a card " + card.getValue() + " of " +
+                        card.getSuite().getDisplayCode());
                 hand.addCardToHand(player.getPlayerId(), card, trumpSuite);
             }
             startingPlayerId = hand.getCurrentlyWinningPlayer();
-            System.out.println("Hand won by " + hand.getCurrentlyWinningPlayer());
-            printPlayerCards(numPlayers, players);
+            System.out.println("Hand won by player " + startingPlayerId);
+
+            Integer handsWon = playerIdVsHandsWon.get(startingPlayerId);
+            if (handsWon == null) {
+                handsWon = 0;
+            }
+            playerIdVsHandsWon.put(startingPlayerId, handsWon + 1);
+            if (numHands != 52 / numPlayers - 1) {
+                //do not want to print the cards after last hand
+                printPlayerCards(numPlayers, players);
+            }
+        }
+
+        System.out.println("--------STATS-------");
+        for (Map.Entry<Integer, Integer> entry : playerIdVsHandsWon.entrySet()) {
+            System.out.println("Player " + entry.getKey() + " won " + entry.getValue() + " hands");
         }
     }
 
