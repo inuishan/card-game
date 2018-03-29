@@ -112,6 +112,32 @@ public class Player {
         return null;
     }
 
+    private Card playMinCardOfAnySuiteExceptTrump(Suite trump) {
+        List<Suite> qualifiedSuits = new ArrayList<>();
+        int min = Integer.MAX_VALUE;
+        for (Map.Entry<Suite, List<Card>> entry : suiteVsCards.entrySet()) {
+            Suite suite = entry.getKey();
+            List<Card> cards = entry.getValue();
+            if (suite != trump && cards.size() > 0) {
+                Card minCard = cards.get(cards.size() - 1);
+                if (minCard.getValue() < min) {
+                    min = minCard.getValue();
+                    qualifiedSuits = new ArrayList<>();
+                    qualifiedSuits.add(suite);
+                } else if (minCard.getValue() == min) {
+                    qualifiedSuits.add(suite);
+                }
+            }
+        }
+        Random random = new Random(System.currentTimeMillis());
+        int index = random.nextInt(qualifiedSuits.size());
+        Suite suite = qualifiedSuits.get(index);
+        List<Card> cards = suiteVsCards.get(suite);
+        Card cardToPlay = cards.get(cards.size() - 1);
+        cards.remove(cardToPlay);
+        return cardToPlay;
+    }
+
     private Card playCardOfCurrentSuite(Hand hand, Suite currentSuite, List<Card> currentSuiteCards) {
         //This means I have cards of same suite, lets see if I can win this hand.
         if (hand.getMaxTrumpCard() != 0) {
