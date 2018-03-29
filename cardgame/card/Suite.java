@@ -15,4 +15,8 @@ public enum Suite {
     Suite(String displayCode) {
         this.displayCode = displayCode;
     }
+
+    public String getDisplayCode() {
+        return displayCode;
+    }
 }
