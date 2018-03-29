@@ -212,7 +212,12 @@ public class Player {
      * @return The {@link Card} which I play in the Hand
      */
     private Card playMaxOfSuite(Suite suite, boolean remove) {
-        return null;
+        List<Card> cards = suiteVsCards.get(suite);
+        Card card = cards.get(0);
+        if (remove) {
+            cards.remove(card);
+        }
+        return card;
     }
 
     /**
@@ -223,6 +228,11 @@ public class Player {
      * @return The {@link Card} which I play in the Hand
      */
     private Card playMinOfSuite(Suite suite, boolean remove) {
-        return null;
+        List<Card> cards = suiteVsCards.get(suite);
+        Card card = cards.get(cards.size() - 1);
+        if (remove) {
+            cards.remove(card);
+        }
+        return card;
     }
 }
