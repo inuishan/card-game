@@ -81,26 +81,31 @@ public class Player {
         List<Card> currentSuiteCards = suiteVsCards.get(currentSuite);
         if (currentSuiteCards != null && currentSuiteCards.size() > 0) {
             return playCardOfCurrentSuite(hand, currentSuite, currentSuiteCards);
-
         } else {
-            //I do not have cards of the same suite, lets see if I can throw in a trump
-            List<Card> trumpCards = suiteVsCards.get(trumpSuite);
-            if (trumpCards != null && trumpCards.size() > 0) {
-                //I have trump card
-                if (hand.getMaxTrumpCard() != 0) {
-                    //There is a trump thrown in the hand, Lets find if I have any trump greater than this
-                    Card cardToRemove = null;
-                    for (int index = trumpCards.size() - 1; index >= 0; index++) {
-                        Card card = trumpCards.get(index);
-                        if (card.getValue() > hand.getMaxTrumpCard()) {
-                            cardToRemove = card;
-                            break;
-                        }
+            Card cardToRemove = getCardOfAnotherSuite(hand, trumpSuite);
+            if (cardToRemove != null) return cardToRemove;
+        }
+        return null;
+    }
+
+    private Card getCardOfAnotherSuite(Hand hand, Suite trumpSuite) {
+        //I do not have cards of the same suite, lets see if I can throw in a trump
+        List<Card> trumpCards = suiteVsCards.get(trumpSuite);
+        if (trumpCards != null && trumpCards.size() > 0) {
+            //I have trump card
+            if (hand.getMaxTrumpCard() != 0) {
+                //There is a trump thrown in the hand, Lets find if I have any trump greater than this
+                Card cardToRemove = null;
+                for (int index = trumpCards.size() - 1; index >= 0; index++) {
+                    Card card = trumpCards.get(index);
+                    if (card.getValue() > hand.getMaxTrumpCard()) {
+                        cardToRemove = card;
+                        break;
                     }
-                    if (cardToRemove != null) {
-                        trumpCards.remove(cardToRemove);
-                        return cardToRemove;
-                    }
+                }
+                if (cardToRemove != null) {
+                    trumpCards.remove(cardToRemove);
+                    return cardToRemove;
                 }
             }
         }

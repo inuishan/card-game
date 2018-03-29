@@ -26,14 +26,14 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cardgame/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="90" column="106" lean-forward="true" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="106" />
+            <state relative-caret-position="412">
+              <caret line="105" column="41" lean-forward="true" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5874#5875#0" expanded="true" />
-                <element signature="e#5901#5902#0" expanded="true" />
-                <element signature="e#6278#6279#0" expanded="true" />
-                <element signature="e#6305#6306#0" expanded="true" />
+                <element signature="e#6023#6024#0" expanded="true" />
+                <element signature="e#6050#6051#0" expanded="true" />
+                <element signature="e#6427#6428#0" expanded="true" />
+                <element signature="e#6454#6455#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1070,7 +1070,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522261043114</updated>
-      <workItem from="1522261047117" duration="6242000" />
+      <workItem from="1522261047117" duration="6364000" />
     </task>
     <task id="LOCAL-00001" summary="idea files">
       <created>1522261273041</created>
@@ -1205,11 +1205,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522296536078</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="finding trump">
+      <created>1522297551530</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1522297551530</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6242000" />
+    <option name="totallyTimeSpent" value="6364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -1274,7 +1281,8 @@
     <MESSAGE value="player playing card method" />
     <MESSAGE value="sorting" />
     <MESSAGE value="method extraction" />
-    <option name="LAST_COMMIT_MESSAGE" value="method extraction" />
+    <MESSAGE value="finding trump" />
+    <option name="LAST_COMMIT_MESSAGE" value="finding trump" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1378,14 +1386,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cardgame/player/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="90" column="106" lean-forward="true" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="106" />
+        <state relative-caret-position="412">
+          <caret line="105" column="41" lean-forward="true" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5874#5875#0" expanded="true" />
-            <element signature="e#5901#5902#0" expanded="true" />
-            <element signature="e#6278#6279#0" expanded="true" />
-            <element signature="e#6305#6306#0" expanded="true" />
+            <element signature="e#6023#6024#0" expanded="true" />
+            <element signature="e#6050#6051#0" expanded="true" />
+            <element signature="e#6427#6428#0" expanded="true" />
+            <element signature="e#6454#6455#0" expanded="true" />
           </folding>
         </state>
       </provider>
