@@ -1,26 +1,5 @@
-This simulates a simple card game. Rules of the games are as follows:
 
-Played with a deck of 52 cards with 4 suites and 13 number cards
-
-4 players plays the game.
-
-
-1. distribute cards among players randomly
-2. decide random trump for the game
-3. choose a player randomly to start the game
-4. game starts 
-
-
-game strategy : 
-each player tries to win maximum no. of hands greedily. at each turn, player tries to win it. 
-
-1. if player has cards of same suit, it puts forth the highest available, given the highest card is higher than the highest played card till then in the hand
-2. if player has cards of same suit but no card is higher than the highest played card, he puts the smallest card of same suit
-3. if player doesn't have card of same suit, he puts smallest available trump card that would win the hand till that time
-4. if player doesn't have big enough trump card, or he doesn't have trump at all, he puts smallest available card of any other suit, in case of conflict choose random
-
-
-<b>Please not that while playing the first card of the hand, the player does not play his highest card, he chosses a random suite except tump and plays the highest card of that trump. </b>
+<b>Please not that while playing the first card of the hand, the player does not play his highest card, he chosses a random suite except tump and plays the highest card of that suite. </b>
 
 ```
 A sample simulation of the game:
